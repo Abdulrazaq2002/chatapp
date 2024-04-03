@@ -4,7 +4,7 @@ import UserLogout from "../../hooks/userLogout";
 export default function LogoutButton() {
   const { loading, logout } = UserLogout(); // Call UserLogout to get loading and logout
   return (
-    <div className='mt-auto'>
+    <div className='mt-auto mb-20'>
       {!loading ? (
         <BiLogOut
           className='w-6 h-6 cursor-pointer hover:text-blue-900'

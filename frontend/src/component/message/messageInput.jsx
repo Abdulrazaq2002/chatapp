@@ -15,12 +15,12 @@ export default function MessageInput() {
 
   return (
     <form
-      className='fixed bottom-0 left-50 right-0 p-2 bg-white border-t border-gray-200'
+      className='fixed bottom-0 left-0 right-0 md:bottom-0 p-2 bg-white border-t border-gray-200 '
       onSubmit={handleSubmit}>
       <div className='relative'>
         <input
           type='text'
-          className='border text-sm rounded-lg w-full p-2.5 pl-10 border-gray-600 text-black'
+          className='border text-sm rounded-lg w-full p-2.5 border-gray-600 text-black'
           placeholder='Type Message to Send'
           value={message}
           onChange={(e) => setMessage(e.target.value)}

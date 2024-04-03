@@ -9,7 +9,7 @@ export default function Slidebar() {
       <SearchInput className='text-sm' />
       <div className='divider px-3'></div>
       <Conversations className='text-sm' />
-      <LogoutButton className='text-sm' />
+      <LogoutButton />
     </div>
   );
 }
