@@ -6,11 +6,9 @@
   "type": "module",
   "homepage": "http://abdulrazaq2002.github.io/chat-app",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
     "server": "nodemon backend/server.js",
-    "start": "node backend/server.js",
-    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+    "start": "node backend/server.js"
   },
   "keywords": [],
   "author": "",
