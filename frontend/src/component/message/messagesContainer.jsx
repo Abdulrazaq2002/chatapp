@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Messages from "./messages";
 import MessageInput from "./messageInput";
 import { TiMessages } from "react-icons/ti";
@@ -7,6 +7,11 @@ import { useAuthContext } from "../../context/authContext";
 
 export default function MessagesContainer() {
   const { selectedConversation, setSelectedConversation } = userConversation();
+  useEffect(() => {
+    return () => {
+      setSelectedConversation(null);
+    };
+  }, [setSelectedConversation]);
 
   return (
     <div className='flex flex-col w-full h-96 md:h-96 overflow-auto  mb-16 md:mb-0'>
