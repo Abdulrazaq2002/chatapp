@@ -12,17 +12,20 @@ export default function MessageInput() {
     await sendMessage(message);
     setMessage("");
   };
+
   return (
-    <form className='px-4 my-4' onSubmit={handleSubmit}>
-      <div className='w-full relative'>
+    <form
+      className='fixed bottom-0 left-50 right-0 p-2 bg-white border-t border-gray-200'
+      onSubmit={handleSubmit}>
+      <div className='relative'>
         <input
           type='text'
-          className='border text-sm rounded-lg block w-full p-2.5 gr-gray-700 border-gray-600 text-black'
+          className='border text-sm rounded-lg w-full p-2.5 pl-10 border-gray-600 text-black'
           placeholder='Type Message to Send'
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />
-        <button className='absolute  inset-y-0 end-0 flex items-center pe-3'>
+        <button className='absolute inset-y-0 right-0 flex items-center pr-3'>
           {loading ? (
             <div className='loading loading-spinner'></div>
           ) : (
@@ -33,6 +36,7 @@ export default function MessageInput() {
     </form>
   );
 }
+
 //Started Code
 // import React from "react";
 // import { BsSend } from "react-icons/bs";

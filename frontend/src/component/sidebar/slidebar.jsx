@@ -1,18 +1,19 @@
 import React from "react";
 import SearchInput from "./searchInput";
-import Conversetions from "./conversations";
+import Conversations from "./conversations";
 import LogoutButton from "./logoutButton";
 
 export default function Slidebar() {
   return (
-    <div className='order-r border-slate-500 flex flex-col'>
-      <SearchInput />
+    <div className='border-slate-500 flex flex-col'>
+      <SearchInput className='text-sm' />
       <div className='divider px-3'></div>
-      <Conversetions />
-      <LogoutButton />
+      <Conversations className='text-sm' />
+      <LogoutButton className='text-sm' />
     </div>
   );
 }
+
 //Started Code
 // import React from "react";
 // import SearchInput from "./searchingout";
